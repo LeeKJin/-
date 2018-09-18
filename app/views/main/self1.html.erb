@@ -1,0 +1,24 @@
+
+  <center>
+<h1 class="fHanna"> 자가진단 </h1>
+
+<br>
+
+  <form action="/self_action">
+    <p class="fHanna"> 성별 : <input type="radio" name="gender" value="man" > 남자 
+    <input type="radio" name="gender" value="girl"> 여자 <br><br> </p>
+    
+    <p class="fHanna"> 나이 : <input type="text" name="age" size=5>세  <br><br> </p>
+    
+    <p class="fHanna"> 음주빈도 : 주 <input type="text" name="drink" size=5>회 / <input type="text" name="drink2" size=5>병 <br><br></p>
+    
+    <p class="fHanna"> 흡연유무 : <input type="radio" name="smoke" value="smoking"> 흡연 <input type="radio" name="smoke" value="nosmoking"> 비흡연 <br><br></p>
+    
+    <p class="fHanna"> 수면시간 : <input type="text" name="sleeptime" size=5>시간  <br><br> </p>
+    <input type="hidden" name="id" value="<%=current_user.email%>">
+    
+     <button type="submit"  class="btn btn-brown" style="background-color:#633517; color:gold; font-family:'Hanna'; font-size:20px;">다음</button>
+    </center>
+  </form>
+</center>
+</div>

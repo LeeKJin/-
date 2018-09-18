@@ -1,0 +1,27 @@
+
+<center>
+    
+  <h1 class="fHanna">History</h1>
+    
+  <table class="type07">
+    <thead>
+    <tr>
+        <th scope="col-sm-1" style="color:gold; font-family:'Hanna'; font-size:20px;">번호</th>
+        <th scope="col-sm-3" style="color:gold; font-family:'Hanna'; font-size:20px;">진단날짜</th>
+        <th scope="col-sm-6" style="color:gold; font-family:'Hanna'; font-size:20px;">진단내용</th>
+    </tr>
+    </thead>
+    
+    <%@m.each do |m|%>
+    
+      <tbody>
+        <tr>
+            <th scope="row" style="color:black; font-family:'Hanna'; font-size:20px;"><%=m.history_q_ID%></th>
+            <td style="color:black; font-family:'Hanna'; font-size:20px;"> <%=m.created_at.strftime("%F %T")%></td>
+            <td style="color:black; font-family:'Hanna'; font-size:20px;"><%=m.h_result%></td>
+        </tr>
+      </tbody>
+    <%end%>
+   
+   
+</center>

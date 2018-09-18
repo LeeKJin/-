@@ -1,0 +1,36 @@
+
+<center>
+    
+    <h1 class="fHanna"> 전문의와의 1대1 상담</h1>
+
+    <br>
+    
+    <button type="button"  class="btn btn-brown" style="background-color:#633517; color:gold; font-family:'Hanna'; font-size:20px;"> <a href="/mtm_write">글쓰기</a></button>
+    <br><br>
+   
+    
+  <table class="type07">
+    <thead>
+    <tr>
+        <th scope="col-sm-1" style="color:gold; font-family:'Hanna'; font-size:20px;">글번호</th>
+        <th scope="col-sm-2" style="color:gold; font-family:'Hanna'; font-size:20px;">제목</th>
+        <th scope="col-sm-5" style="color:gold; font-family:'Hanna'; font-size:20px;">작성자</th>
+        <th scope="col-sm-4" style="color:gold; font-family:'Hanna'; font-size:20px;">작성시간</th>
+        
+    </tr>
+    </thead>
+    
+    <% @posts.each do |p|%>
+    
+      <tbody>
+        <tr>
+            <th scope="row" style="color:black; font-family:'Hanna'; font-size:20px;"><%=p.id%></th>
+            <td style="color:black; font-family:'Hanna'; font-size:20px;"><a href="/mtm_read/<%=p.id%>"><%=p.title%></a></td>
+            <td style="color:black; font-family:'Hanna'; font-size:20px;"><%=p.writer%></td>
+            <td style="color:black; font-family:'Hanna'; font-size:20px;"><%=p.created_at.strftime("%F %T")%></td>
+        </tr>
+      </tbody>
+    <%end%>
+   
+   
+</center>

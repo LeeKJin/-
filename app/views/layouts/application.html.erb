@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DDong</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+ <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=qBsPrigtizzGGCgH6qYW&submodules=geocoder"></script>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+
+
+
+  <style type="text/css">
+ body {
+    background-color: blanchedalmond;
+}
+
+h1 {
+    color: #964b00;
+    text-align: center;
+}
+
+p {
+    font-family: verdana;
+    font-size: 20px;
+}
+
+li {
+    font-size: 20px;
+}  
+  
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a class="fHanna" href="/index">내똥어때</a></li>
+  <li><a class="fHanna" href="/introduce">소개</a></li>
+  <li><a class="fHanna" href="/self1">자가진단</a></li>
+  <li><a class="fHanna" href="/mtm">1대1 상담</a></li>
+  <li><a class="fHanna" href="/search">병원 찾기</a></li>
+  <li><a class="fHanna" href="/history">History</a></li>
+</ul>
+
+
+<br><br>
+
+<%= yield %>
+
+
+</body>
+</html>
+
+<!--페이지에 공유되는 부분 모든페이지에 동일하게 하고싶은거 있으면 여기에 넣으면 돼-->

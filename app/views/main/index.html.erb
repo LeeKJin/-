@@ -1,0 +1,27 @@
+
+<center>
+  <br><br>
+<img src="ddddd.jpg" alt="Trulli" width="300" height="300" style="
+border: 3px solid brown;
+border-radius: 7px;
+-moz-border-radius: 7px;
+-khtml-border-radius: 7px;
+-webkit-border-radius: 7px;
+"/> <br><br>
+
+  <h1 class="fHanna">내 똥 어 때</h1>
+  <br><br>
+  
+  
+    <% if user_signed_in? %>
+    <!--로그인 되어있는 상태에서 실행-->
+    <p> 이메일: <%=current_user.email%> </p>
+    
+    <%= link_to "로그아웃", destroy_user_session_path, method: :delete, data: { confirm: "로그아웃 하시겠습니까?" } %>
+    <%else%>
+    <!--로그인 안 되어있는 상태에서 실행-->
+  <a href="/users/sign_in"; style=font-family:'Hanna';>로그인 하러가기</a>
+  
+<%end%>
+
+</center>

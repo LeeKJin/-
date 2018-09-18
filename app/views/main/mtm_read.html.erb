@@ -1,0 +1,82 @@
+
+    
+<center>
+    
+    
+  <table class="type07">
+    <thead>
+    <tr>
+        <th scope="col-sm-1" style="color:gold; font-family:'Hanna'; font-size:20px;">작성자</th>
+        <th scope="col-sm-2" style="color:gold; font-family:'Hanna'; font-size:20px;">제목</th>
+        <th scope="col-sm-5" style="color:gold; font-family:'Hanna'; font-size:20px;">내용</th>
+    </tr>
+    </thead>
+    
+      <tbody>
+        <tr>
+            <th scope="row" style="color:black; font-family:'Hanna'; font-size:20px;"><%=@find_post.writer%></th>
+            <td style="color:black; font-family:'Hanna'; font-size:20px;"><%=@find_post.title%></td>
+            <td style="color:black; font-family:'Hanna'; font-size:20px;"><%=@find_post.content%></td>
+        </tr>
+      </tbody>
+    
+    <button type="button"  class="btn btn-brown" style="background-color:#633517; color:gold; font-family:'Hanna'; font-size:20px;"> <a href="/mtm_update/<%=@find_post.id%>">수정</a></button>
+    <button type="button"  class="btn btn-brown" style="background-color:#633517; color:gold; font-family:'Hanna'; font-size:20px;"> <a href="/mtm_delete/<%=@find_post.id%>">삭제</a></button>
+   
+  
+    
+    <br><br>
+    <hr>
+    
+    <p>
+        
+        <form action="/comment/mtm_create/<%=@find_post.id%>">
+            댓글 작성자 : <input type="text" name="commentor"><br>
+            댓글 내용 : <input type="text" name="comment_content"> 
+            <div class="container-fluid">
+             <button type="button"  class="btn btn-brown" style="background-color:#633517; color:gold; font-family:'Hanna'; font-size:20px;"><a>댓글작성</a>
+    </button>
+            </div>
+        </form>
+        
+    </p>
+    
+    
+    <button type="button"  class="btn btn-brown" style="background-color:#633517; color:gold; font-family:'Hanna'; font-size:20px;"><a href="/mtm">홈으로</a>
+
+    <hr>
+    <br>
+    <br>
+    
+    <%@comments.each do |c|%>
+        <p>
+            
+    <table class="type07">
+    <thead>
+    <tr>
+        <th scope="col-sm-3" style="color:gold; font-family:'Hanna'; font-size:20px;">작성자</th>
+        <th scope="col-sm-9" style="color:gold; font-family:'Hanna'; font-size:20px;">내용</th>
+    </tr>
+    </thead>
+    
+      <tbody>
+        <tr>
+            <th scope="row" style="color:black; font-family:'Hanna'; font-size:20px;"><%=c.comment_writer%></th>
+            <td style="color:black; font-family:'Hanna'; font-size:20px;"><%=c.comment_content%></td>
+        </tr>
+      </tbody>
+    
+    
+    <button type="button"  class="btn btn-brown" style="background-color:#633517; color:gold; font-family:'Hanna'; font-size:20px;">
+        <a href="/comment/mtm_delete/<%=c.id%>/<%=c.post_id%>">댓글 삭제</a>
+    </button>
+    
+        </p>
+    <%end%>
+    
+    <hr>
+    <br>
+    
+
+    
+</center>

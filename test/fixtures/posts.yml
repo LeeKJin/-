@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  comment: MyString
+  hospital: MyString
+  hospital_review: MyString
+
+two:
+  comment: MyString
+  hospital: MyString
+  hospital_review: MyString

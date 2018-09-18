@@ -1,0 +1,51 @@
+<center>
+<h1 class="fHanna"> 자가진단 </h1>
+
+<form action="/self_result_action">
+    
+    
+    <p class="fHanna"> 색깔 : <br>
+    <img src="/color.jpg" alt="" usemap="#Map" />
+    <map name="Map" id="Map">
+        <area alt="" title="" href="#?c=1&id=<%=@currentQ.id%>" shape="poly" coords="27,13,27,197,212,198,211,13" onclick='click1()'/>
+        <area alt="" title="" href="#?c=2&id=<%=@currentQ.id%>" shape="poly" coords="357,13,355,200,541,201,541,13" onclick='click2()'/>
+        <area alt="" title="" href="#?c=3&id=<%=@currentQ.id%>" shape="poly" coords="26,264,25,449,211,451,210,263" onclick='click3()'/>
+        <area alt="" title="" href="#?c=4&id=<%=@currentQ.id%>" shape="poly" coords="355,261,355,449,540,452,540,264" onclick='click4()'/>
+        <area alt="" title="" href="#?c=5&id=<%=@currentQ.id%>" shape="poly" coords="26,516,209,517,210,702,27,699" onclick='click5()'/>
+        <area alt="" title="" href="#?c=6&id=<%=@currentQ.id%>" shape="poly" coords="355,513,357,701,542,705,542,517" onclick='click6()'/>
+    </map>
+    
+    <input type ='hidden' id ='result' name ='c' value="">
+    <br><br> </p>  
+    
+    <p class="fHanna"> 냄새 : <input type="radio" name="smell" value="sikeom"> 시큼한 냄새 <input type="radio" name="smell" value="birit"> 비린 냄새 
+                <input type="radio" name="smell" value="ssuock"> 썩은 냄새 <input type="radio" name="smell" value="ilban"> 일반적인 냄새 <br><br></p>
+                
+    <p class="fHanna"> 피 유무 : <input type="radio" name="blood" value="yes"> 네 <input type="radio" name="blood" value="no"> 아니요 <br><br> </p>
+    
+    <input type="hidden" name="id" value="<%=@currentQ.id%>">
+    <button type="submit"  class="btn btn-brown" style="background-color:#633517; color:gold; font-family:'Hanna'; font-size:20px;">결과보기</button>
+    </center>
+        
+</form>
+
+<script>
+    function click1(){
+        document.getElementById('result').value = "1"
+    }
+    function click2(){
+        document.getElementById('result').value = "2"
+    }
+    function click3(){
+        document.getElementById('result').value = "3"
+    }
+    function click4(){
+        document.getElementById('result').value = "4"
+    }
+    function click5(){
+        document.getElementById('result').value = "5"
+    }
+    function click6(){
+        document.getElementById('result').value = "6"
+    }
+</script>
